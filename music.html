@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Music App</title>
+
+	<style type="text/css">
+
+body {
+	background-color: black;   
+}
+
+#instrument {
+    height: 116px;
+    width: 812px;
+    padding-right: 10px;
+    padding-top: 50px;
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    margin-left: 10px;
+    margin-top: 10px;
+    float:left;
+}
+
+#c {
+    background-color: #3e181b;
+    border: 3px solid #db1d2d;
+}
+
+#d {
+    background-color: #422018;
+    border: 3px solid #f0421c;
+}
+
+#e {
+    background-color: #45391b;
+    border: 3px solid #fec02d;
+}
+
+#f {
+    background-color: #193c29;
+    border: 3px solid #20d071;
+}
+
+#g {
+    background-color: #18323e;
+    border: 3px solid #1a9ddb;
+}
+
+#a {
+    background-color: #331f35;
+    border: 3px solid #a13fad;
+} 
+
+#b {
+    background-color: #43293d;
+    border: 3px solid #f26fd4;
+}
+
+
+/* Hover Styles */
+#c:hover {
+    background-color:#661920;
+    cursor: pointer;
+}
+
+#d:hover {
+    background-color:#6e2819;
+    cursor: pointer;
+}
+
+#e:hover {
+    background-color:#735b20;
+    cursor: pointer;
+}
+#f:hover {
+    background-color:#1b613b;
+    cursor: pointer;
+}
+#g:hover {
+    background-color:#184d65;
+    cursor: pointer;
+}
+#a:hover {
+    background-color:#4e2753;
+    cursor: pointer;
+}
+#b:hover {
+    background-color:#6f3a62;
+    cursor: pointer;
+}
+		</style>
+
+</head>
+
+<body>
+
+<script type="text/javascript">
+	
+	var cNote = document.getElementById('cAudio');
+
+	$('#c').mousedown(function(){
+		cNote.play()
+});
+
+</script>
+
+<div id="instrument">
+	<div id="c" class="box"></div>
+	<div id="d" class="box"></div>
+	<div id="e" class="box"></div>
+	<div id="f" class="box"></div>
+	<div id="g" class="box"></div>
+	<div id="a" class="box"></div>
+	<div id="b" class="box"></div>
+</div>
+
+	<audio id="cAudio">
+        <source src="/static/media/c_note.mp3" type="audio/mpeg"></source>
+        <source src="/static/media/c_note.ogg" type="audio/ogg"></source>
+        <source src="/static/media/c_note.wav" type="audio/wav"></source>   
+	</audio>
+
+	
+</body>
+</html>
